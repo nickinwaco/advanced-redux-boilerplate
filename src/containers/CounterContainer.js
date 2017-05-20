@@ -1,10 +1,16 @@
 /*
-CONTAINER file aka SMART COMPONENT
+CONTAINER file aka *SMART COMPONENT*
 ./container/index.js
 
-this file "glues" the Dumb components to the store
+this file "glues" the Dumb components to the store.
+
+actions >> reducers (update state) >> components
+>> containers (update store) >> store (master file of state)
+
+
+
 http://redux.js.org/docs/basics/ExampleTodoList.html
->>Usage with React >> Connect
+\Usage with React \ Connect
 
 dependencies
 
@@ -32,7 +38,7 @@ import {
 function mapStateToProps(state) {
   console.log("in map state to props", state)
   return {
-    value: 3
+    value: state.counter
   };
 }
 

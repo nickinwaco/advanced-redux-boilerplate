@@ -2,6 +2,8 @@
 COMPONENT
 ./components/counter.js
 
+these are DUMB COMPONENTs
+
 dependencies:
 1.  C:> yarn add prop-types
 
@@ -12,14 +14,16 @@ export default Counter;
 */
 
 
-import React from "redux";
+import React from "react";
 import PropTypes from "prop-types";
 
 function Counter(props) {
   console.log("props in counter component", props);
   return (
     <div>
-      {props.value}
+      <button onClick={props.onIncrease}> + </button>
+        Current Value: {props.value}
+      <button onClick={props.onDecrease}> - </button>
     </div>
   );
 }
